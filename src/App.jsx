@@ -4,12 +4,15 @@ import Middle from "./components/Middle";
 import Bottom from "./components/Bottom";
 
 const App = () => {
+  let name = "rahul";
+
+  let arr = ["rahul", "ankur", "sarthak", "ayush"];
 
   return (
     <div>
-      <Top name={name} />
-      <Middle />
-      <Bottom />
+      {arr.map((elem, index) => {
+        return <Top key={index} name={elem}  />;
+      })}
     </div>
   );
 };
