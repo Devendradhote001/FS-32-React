@@ -1,3 +1,5 @@
-#y{
-  background-color: red;
+@import "tailwindcss";
+body{
+  background-color: white;
+  color: white;
 }

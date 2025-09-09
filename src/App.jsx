@@ -1,18 +1,15 @@
-import React from "react";
-import Top from "./components/Top";
-import Middle from "./components/Middle";
-import Bottom from "./components/Bottom";
+import React, { useState } from "react";
+import Input from "./components/Input";
+import Todos from "./components/Todos";
 
 const App = () => {
-  let name = "rahul";
-
-  let arr = ["rahul", "ankur", "sarthak", "ayush"];
+  const [todos, setTodos] = useState([]);
+  console.log(todos)
 
   return (
-    <div>
-      {arr.map((elem, index) => {
-        return <Top key={index} name={elem}  />;
-      })}
+    <div className="h-screen gap-10 w-screen flex flex-col justify-center items-center">
+      <Input setTodos={setTodos} todos={todos} />
+      <Todos />
     </div>
   );
 };
