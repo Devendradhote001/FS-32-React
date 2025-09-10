@@ -4,12 +4,12 @@ import Todos from "./components/Todos";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
-  console.log(todos)
+  console.log(todos);
 
   return (
     <div className="h-screen gap-10 w-screen flex flex-col justify-center items-center">
       <Input setTodos={setTodos} todos={todos} />
-      <Todos />
+      <Todos todos={todos} />
     </div>
   );
 };
